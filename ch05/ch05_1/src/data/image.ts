@@ -1,7 +1,6 @@
 import * as U from './util'
-
 export const picsumUrl = (width: number, height: number): string =>
-  `http://picsum.photos/${width}/${height}`
+  `https://picsum.photos/${width}/${height}`
 export const randomImage = (
   w: number = 1000,
   h: number = 800,

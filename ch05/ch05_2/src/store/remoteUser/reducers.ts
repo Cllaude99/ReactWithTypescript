@@ -2,12 +2,12 @@ import * as T from './types'
 
 const initialState: T.State = {
   email: '',
-  name: {title:'', first:'',last:''},
+  name: {title: '', first: '', last: ''},
   picture: {large: ''}
 }
 
 export const reducer = (state: T.State = initialState, action: T.Actions) => {
-  switch(action.type){
+  switch (action.type) {
     case '@remoteUser/setUser':
       return action.payload
     case '@remoteUser/changeEmail':
@@ -17,5 +17,5 @@ export const reducer = (state: T.State = initialState, action: T.Actions) => {
     case '@remoteUser/changePicture':
       return {...state, picture: action.payload}
   }
-  return state
+  return state // 반드시 구현해야 합니다
 }

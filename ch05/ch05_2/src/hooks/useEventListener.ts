@@ -1,12 +1,12 @@
-import { useEffect } from 'react';
+import {useEffect} from 'react'
 
 export const useEventListener = (
   target: EventTarget | null,
   type: string,
-  callback: EventListenerOrEventListenerObject | null  
+  callback: EventListenerOrEventListenerObject | null
 ) => {
   useEffect(() => {
-    if(target && callback) {
+    if (target && callback) {
       target.addEventListener(type, callback)
       return () => target.removeEventListener(type, callback)
     }

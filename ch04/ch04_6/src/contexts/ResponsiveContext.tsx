@@ -25,3 +25,7 @@ export const ResponsiveProvider: FC<PropsWithChildren<ResponsiveProviderProps>> 
   }
   return <ResponsiveContext.Provider value={value} children={children} />
 }
+export const useResponsive = () => {
+  const {breakpoint} = useContext(ResponsiveContext)
+  return breakpoint
+}

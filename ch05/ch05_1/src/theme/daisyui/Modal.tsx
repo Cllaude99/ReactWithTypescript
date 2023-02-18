@@ -1,13 +1,13 @@
 import type {FC} from 'react'
-import type { ReactDivProps } from '../../components'
-import { Div } from '../../components'
-import { Icon } from './Icon'
+import type {ReactDivProps} from '../../components'
+import {Div} from '../../components'
+import {Icon} from './Icon'
 
 export type ModalProps = ReactDivProps & {
   open?: boolean
 }
 export const Modal: FC<ModalProps> = ({open, className: _className, ...props}) => {
-  const className = ['modal', open ? 'modal-open' : ' ', _className].join(' ')
+  const className = ['modal', open ? 'modal-open' : '', _className].join(' ')
   return <div {...props} className={className} />
 }
 
@@ -24,15 +24,15 @@ export const ModalContent: FC<ModalContentProps> = ({
 }) => {
   const showCloseIcon = onCloseIconClicked ? true : false
   const className = ['modal-box', showCloseIcon && 'relative', _className].join(' ')
-  if(!showCloseIcon) return <div {...props} className={className} children={children} />
+  if (!showCloseIcon) return <div {...props} className={className} children={children} />
 
   const closeIconClassName = _closeIconClassName ?? 'btn-primary btn-outline btn-sm'
-  return(
+  return (
     <div {...props} className={className}>
-      <Div className='absolute' right='0.5rem' top='0.5rem'>
-        <Icon name='close' className={closeIconClassName} onClick={onCloseIconClicked} />
-        {children}
+      <Div className="absolute" right="0.5rem" top="0.5rem">
+        <Icon name="close" className={closeIconClassName} onClick={onCloseIconClicked} />
       </Div>
+      {children}
     </div>
   )
 }

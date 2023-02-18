@@ -2,7 +2,7 @@ import type * as T from './types'
 
 export const setUser = (payload: T.State): T.SetUserAction => ({
   type: '@remoteUser/setUser',
-  payload  
+  payload
 })
 export const changeEmail = (payload: string): T.ChangeEmailAction => ({
   type: '@remoteUser/changeEmail',
@@ -12,7 +12,7 @@ export const changeName = (payload: T.NameType): T.ChangeNameAction => ({
   type: '@remoteUser/changeName',
   payload
 })
-export const ChangePictureAction = (payload: T.PictureType): T.ChangePictureAction => ({
+export const changePicture = (payload: T.PictureType): T.ChangePictureAction => ({
   type: '@remoteUser/changePicture',
   payload
 })

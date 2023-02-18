@@ -1,4 +1,4 @@
-import { useEffect, useReducer } from 'react';
+import {useEffect} from 'react'
 
 export const useInterval = (callback: () => void, duration: number = 1000) => {
   useEffect(() => {

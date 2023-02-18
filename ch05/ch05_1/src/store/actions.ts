@@ -1,7 +1,6 @@
 import type {Action} from 'redux'
 
-export type setTodayAction = Action<'setToday'> & {
+export type SetTodayAction = Action<'setToday'> & {
   today: Date
 }
-
-export type Actions = setTodayAction
+export type Actions = SetTodayAction

@@ -22,7 +22,7 @@ export type ChangePictureAction = Action<'@remoteUser/changePicture'> & {
   payload: PictureType
 }
 
-export type Actions = 
+export type Actions =
   | SetUserAction
   | ChangeEmailAction
   | ChangeNameAction

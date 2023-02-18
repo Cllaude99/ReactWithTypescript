@@ -1,4 +1,4 @@
-import { combineReducers } from 'redux';
+import {combineReducers} from 'redux'
 import * as Clock from './clock'
 import * as Counter from './counter'
 import * as R from './remoteUser'

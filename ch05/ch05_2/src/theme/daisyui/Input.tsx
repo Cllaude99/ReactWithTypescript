@@ -1,6 +1,11 @@
-import {DetailedHTMLProps, FC, forwardRef, InputHTMLAttributes} from 'react'
+import type {DetailedHTMLProps, InputHTMLAttributes} from 'react'
+import {forwardRef} from 'react'
 
-export type ReactInputProps = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
+// prettier-ignore
+export type ReactInputProps = DetailedHTMLProps<
+  InputHTMLAttributes<HTMLInputElement>,
+  HTMLInputElement>
+
 export type InputProps = ReactInputProps & {}
 
 export const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
